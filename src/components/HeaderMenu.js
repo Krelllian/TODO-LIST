@@ -24,7 +24,7 @@ function HeaderMenu() {
                     <input className='header-input' onChange={trackValue} placeholder="Напишите задачу, которую хотите добавить"></input>
                     <div className='header-btns'>
                         <button className='btn add-task' onClick={() => { dispatch(addTask()); document.querySelector('.header-input').value = "" }}>Добавить задачу</button>
-                        <button className='btn remove-all-tasks' onClick={() => dispatch(removeAllTasks())}>Убрать все задачи</button>
+                        <button className='btn remove-all-tasks' onClick={(e) => { dispatch(removeAllTasks()) }}>Убрать все задачи</button>
                     </div>
                 </div>
             </div>

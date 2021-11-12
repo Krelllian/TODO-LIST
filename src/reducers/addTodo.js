@@ -1,6 +1,7 @@
 
+//state = ["посадить сына", "вырастить дом", "постороить дерево"]
 
-const addTodo = (state = ["wwwww  w ww w w ", "llll lllll"], action) => {
+const addTodo = (state = ["посадить сына", "вырастить дом", "постороить дерево"], action) => {
     switch (action.type) {
         case 'ADD_LIST_ITEM':
             if (document.querySelector('.header-input').value != "") {
@@ -12,7 +13,7 @@ const addTodo = (state = ["wwwww  w ww w w ", "llll lllll"], action) => {
         case 'REMOVE_ALL_TASKS':
             return state = []
         case 'REMOVE_TASK':
-        // return [...state.filter(key != )
+            return state.slice().filter((el, i) => i != action.payload)
         default:
             return state;
     }
