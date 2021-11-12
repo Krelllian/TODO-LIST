@@ -13,6 +13,6 @@ export const removeTask = (index, e) => {
     return {
         type: 'REMOVE_TASK',
         payload: index,
-        taskDisplay: getComputedStyle(e.target.parentElement).display
+        //taskDisplay: getComputedStyle(e.target.parentElement).display
     }
 }
