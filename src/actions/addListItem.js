@@ -8,11 +8,17 @@ export const removeAllTasks = () => {
         type: 'REMOVE_ALL_TASKS'
     }
 }
-export const removeTask = (index, e) => {
+export const removeTask = (id) => {
     //console.log(getComputedStyle(e.target.parentElement).display)
     return {
         type: 'REMOVE_TASK',
-        payload: index,
+        payload: id,
         //taskDisplay: getComputedStyle(e.target.parentElement).display
+    }
+}
+export const toggleComplete = (id) => {
+    return {
+        type: 'TOGGLE_COMPLETE',
+        payload: id
     }
 }
