@@ -24,6 +24,9 @@
     margin-bottom: 20px;
     border: 1px solid black;
     border-radius: 5px;
+    @media (max-width: 500px){
+        width: 300px;
+    }
 }
 .header-input:focus {
     outline: none;

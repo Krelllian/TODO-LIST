@@ -21,7 +21,12 @@
     border-radius: 5px;
     overflow: auto;
     transition: all 1s ease;
+    @media (max-width: 700px) {
+            width: 320px;
+    }
 }
+
+
 .task.enter {
     opacity: 0;
     transform: translate(-100px);
