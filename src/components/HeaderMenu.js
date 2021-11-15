@@ -13,7 +13,12 @@ function HeaderMenu() {
         //console.log(document.querySelector('.header-input').value)
     }
 
-
+    console.log(window.document)
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            { dispatch(addTask()); document.querySelector('.header-input').value = "" }
+        }
+    })
     return (
         <>
             <div className='header'>
