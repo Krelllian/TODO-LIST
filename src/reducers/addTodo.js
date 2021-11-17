@@ -6,8 +6,8 @@ const addTodo = (state = initialState, action) => {
         case 'ADD_LIST_ITEM':
             if (document.querySelector('.header-input').value != "") {
                 return [
+                    { id: Date.now(), text: document.querySelector('.header-input').value, complete: false },
                     ...state,
-                    { id: Date.now(), text: document.querySelector('.header-input').value, complete: false }
                 ];
             } else return state
         case 'REMOVE_ALL_TASKS':
@@ -18,12 +18,11 @@ const addTodo = (state = initialState, action) => {
             state.map((item) => {
                 if (item.id === action.payload) {
                     if (item.complete === true) {
-                        item.complete = false
+                        item.complete = false;
                     } else item.complete = true
                 }
             })
-            return state = state.slice()
-
+            return state = state.slice().sort((a, b) => a.complete - b.complete)
 
 
         default:
