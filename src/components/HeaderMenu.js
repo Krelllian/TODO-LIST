@@ -9,11 +9,8 @@ function HeaderMenu() {
 
     function trackValue(e) {
         document.querySelector('.header-input').value = e.target.value
-
-        //console.log(document.querySelector('.header-input').value)
     }
 
-    console.log(window.document)
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             { dispatch(addTask()); document.querySelector('.header-input').value = "" }

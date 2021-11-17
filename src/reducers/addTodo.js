@@ -1,6 +1,4 @@
 
-//state = ["посадить сына", "вырастить дом", "постороить дерево"]
-//console.log(JSON.parse(localStorage.getItem('tasks')))
 const initialState = localStorage.tasks ? JSON.parse(localStorage.getItem('tasks')) : [{ id: '1111', text: "посадить дерево", complete: true }, { id: '2222', text: "построить дом", complete: true }, { id: '3333', text: "воспитать сына", complete: false }]
 
 const addTodo = (state = initialState, action) => {

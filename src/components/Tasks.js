@@ -9,7 +9,6 @@ import { TransitionGroup, CSSTransition } from "react-transition-group"
 function Tasks() {
     const tasks = useSelector(state => state.tasks);
     const dispatch = useDispatch();
-    //console.log(tasks)
 
     localStorage.setItem('tasks', JSON.stringify(tasks))
 
