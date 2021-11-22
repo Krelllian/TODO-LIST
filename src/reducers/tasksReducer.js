@@ -1,7 +1,7 @@
 
 const initialState = localStorage.tasks ? JSON.parse(localStorage.getItem('tasks')) : [{ id: '1111', text: "посадить дерево", complete: true }, { id: '2222', text: "построить дом", complete: true }, { id: '3333', text: "воспитать сына", complete: false }]
 
-const addTodo = (state = initialState, action) => {
+const tasksReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_LIST_ITEM':
             if (document.querySelector('.header-input').value != "") {
@@ -30,4 +30,4 @@ const addTodo = (state = initialState, action) => {
     }
 }
 
-export default addTodo;
+export default tasksReducer;

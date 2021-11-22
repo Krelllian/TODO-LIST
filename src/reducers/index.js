@@ -1,10 +1,8 @@
-import addTodo from "./addTodo";
-import clearTodo from "./clearTodo";
+import tasksReducer from "./tasksReducer";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-    tasks: addTodo,
-    clearTodo: clearTodo,
+    tasks: tasksReducer,
 })
 
 export default allReducers;

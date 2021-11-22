@@ -4,7 +4,6 @@ import HeaderMenu from './components/HeaderMenu.js';
 import HeaderHero from './components/HeaderHero.js';
 import Tasks from './components/Tasks.js';
 
-//console.log(state.Tasks)
 
 export function App() {
     return (
