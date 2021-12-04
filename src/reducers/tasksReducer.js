@@ -1,5 +1,5 @@
 
-const initialState = localStorage.tasks ? JSON.parse(localStorage.getItem('tasks')) : [{ id: '1111', text: "посадить дерево", complete: true }, { id: '2222', text: "построить дом", complete: true }, { id: '3333', text: "воспитать сына", complete: false }]
+const initialState = localStorage.tasks ? JSON.parse(localStorage.getItem('tasks')) : [{ id: '1111', text: "посадить дерево", complete: false }, { id: '2222', text: "построить дом", complete: false }, { id: '3333', text: "воспитать сына", complete: true }]
 
 const tasksReducer = (state = initialState, action) => {
     switch (action.type) {
